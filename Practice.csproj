@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B4A1822-60F6-4C43-933F-04B749698D21}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Practice</RootNamespace>
+    <AssemblyName>Practice</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract.cs" />
+    <Compile Include="Cast_VS_TypeConversion.cs" />
+    <Compile Include="Constant_Readonly.cs" />
+    <Compile Include="Constructors.cs" />
+    <Compile Include="DataAccessLayer\Address.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\AddressType.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\AdventureBook.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureBook.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\AdventureBook.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\AdventureBook.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureBook.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\AWBuildVersion.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\BillOfMaterial.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\BusinessEntity.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\BusinessEntityAddress.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\BusinessEntityContact.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ContactType.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\CountryRegion.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\CountryRegionCurrency.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\CreditCard.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Culture.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Currency.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\CurrencyRate.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Customer.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\DatabaseLog.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Department.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\EmailAddress.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Employee.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\EmployeeDepartmentHistory.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\EmployeePayHistory.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ErrorLog.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Illustration.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\JobCandidate.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Location.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Password.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Person.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\PersonCreditCard.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\PersonPhone.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\PhoneNumberType.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProcedureReturnMultipleColumns_Result.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Product.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductCategory.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductCostHistory.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductDescription.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductDocument.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductInventory.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductListPriceHistory.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductModel.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductModelIllustration.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductModelProductDescriptionCulture.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductPhoto.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductProductPhoto.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductReview.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductSubcategory.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ProductVendor.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\PurchaseOrderDetail.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\PurchaseOrderHeader.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalesOrderDetail.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalesOrderHeader.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalesOrderHeaderSalesReason.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalesPerson.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalesPersonQuotaHistory.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalesReason.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalesTaxRate.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalesTerritory.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SalesTerritoryHistory.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ScrapReason.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Shift.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ShipMethod.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ShoppingCartItem.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SpecialOffer.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\SpecialOfferProduct.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\StateProvince.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Store.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\TransactionHistory.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\TransactionHistoryArchive.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\ufnGetContactInformation_Result.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\UnitMeasure.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\uspGetBillOfMaterials_Result.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\uspGetEmployeeManagers_Result.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\uspGetManagerEmployees_Result.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\uspGetWhereUsedProductID_Result.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\Vendor.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\WorkOrder.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccessLayer\WorkOrderRouting.cs">
+      <DependentUpon>AdventureBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Delegates_Lambda_Predicate.cs" />
+    <Compile Include="GlobalLogicTEST.cs" />
+    <Compile Include="Ienumerable_Iquerable.cs" />
+    <Compile Include="Class2.cs" />
+    <Compile Include="GenricCollections.cs" />
+    <Compile Include="Lazy Loading.cs" />
+    <Compile Include="Interface1.cs" />
+    <Compile Include="IsAndAsDifference.cs" />
+    <Compile Include="LeetCode Quetions\Arrays.cs" />
+    <Compile Include="Linq_Practice.cs" />
+    <Compile Include="LiskovPrinciple.cs" />
+    <Compile Include="New_OverRide_Operator.cs" />
+    <Compile Include="Out_Ref_Practice.cs" />
+    <Compile Include="PracticeSet2.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticClasses\Customer.cs" />
+    <Compile Include="StaticClasses\Master.cs" />
+    <Compile Include="StaticClasses\SomeApplication.cs" />
+    <Compile Include="StaticClasses\Utility.cs" />
+    <Compile Include="StringAndStringBuilder.cs" />
+    <Compile Include="Vlaue_Refernce_Type.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="DataAccessLayer\AdventureBook.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AdventureBook.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataAccessLayer\AdventureBook.edmx.diagram">
+      <DependentUpon>AdventureBook.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataAccessLayer\AdventureBook.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdventureBook.edmx</DependentUpon>
+      <LastGenOutput>AdventureBook.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataAccessLayer\AdventureBook.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdventureBook.edmx</DependentUpon>
+      <LastGenOutput>AdventureBook.cs</LastGenOutput>
+    </Content>
+    <Content Include="SingletonDesignPattern\capitals.txt" />
+    <Compile Include="SingletonDesignPattern\Creational.Singleton.Singleton.cs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.2.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

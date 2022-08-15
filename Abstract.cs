@@ -20,6 +20,10 @@ namespace Practice
         }
 
         public abstract double Recatangle();
+        public string TestToGit()
+        {
+            return "Test To Git";
+        }
 
         public double Nothing()
         {

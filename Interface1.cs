@@ -9,6 +9,5 @@ namespace Practice
     interface Interface1
     {
         void Method1();
-        void test();
     }
 }
